@@ -48,8 +48,8 @@ ENV NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib NODE_ENV=development
 # johnpapa/angular2-tour-of-heroes setup
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
-RUN git clone https://github.com/johnpapa/angular2-tour-of-heroes.git toh
-WORKDIR /usr/src/toh
+RUN git clone https://github.com/sitepoint-editors/sitepoint_projectcode_chrome-extension-angular-typescript.git ng2ce
+WORKDIR /usr/src/ng2cd
 RUN npm install
 RUN chmod -R 776 *
 
