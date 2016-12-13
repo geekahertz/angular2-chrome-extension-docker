@@ -1,7 +1,6 @@
-# angular2-tour-of-heroes
+# angular2-chrome-extension
 
-Samba docker container for learning Angular2: John Papa's Tour of Heros Demo
-(folked from https://github.com/dperson/samba)
+Samba docker container for learning Angular2:  Fischaela's Chrome extension angular typescript Demo
 
 # How to use this image
 ## Host setup
@@ -12,7 +11,7 @@ or
 
 ## Running container
 
-    docker run -p 139:139 -p 445:445 -p 8000:8000 -p 3001:3001 -d --name toh dman1680/angular2-tour-of-heroes
+    docker run -p 139:139 -p 445:445 -p 8000:8000 -p 3001:3001 -d --name ng2ce dman1680/angular2-chrome-extension
         
 ## Accessing container
 ### Find docker machine ip
@@ -25,7 +24,7 @@ or
 
 ### Setup network share access
 
-    docker exec -d toh samba.sh -u "testuser;pass" -s "usr;/usr;no;no;no;testuser"
+    docker exec -d ng2ce samba.sh -u "testuser;pass" -s "usr;/usr;no;no;no;testuser"
 
 ### Access network share folder
     
@@ -34,4 +33,4 @@ or
 
 ### Enter container's bash
     
-    docker exec -it toh bash
+    docker exec -it ng2ce bash

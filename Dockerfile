@@ -45,7 +45,7 @@ VOLUME ["/etc/samba"]
 RUN npm install -g node-gyp
 ENV NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib NODE_ENV=development
 
-# johnpapa/angular2-tour-of-heroes setup
+# sitepoint-editors/sitepoint_projectcode_chrome-extension-angular-typescript setup
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
 RUN git clone https://github.com/sitepoint-editors/sitepoint_projectcode_chrome-extension-angular-typescript.git ng2ce
@@ -56,6 +56,6 @@ RUN chmod -R 776 *
 EXPOSE 137/udp 138/udp 139 445 8000 3001
 
 # launch app 
-CMD ["npm","start" ]
+CMD ["npm","run start" ]
 
 
