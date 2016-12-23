@@ -4,10 +4,10 @@ MAINTAINER dman1680
 LABEL "version"="0.0.1"
 
 # uncomment to allow self-sign certs if you are behind a coporate CA (open to MitM)
-#RUN echo "" | openssl s_client -host registry.npmjs.org -port 443 -showcerts | awk '/BEGIN CERT/ {p=1} ; p==1; /END CERT/ {p=0}' > /usr/local/share/ca-certificates/npmjs.org.crt
-#RUN update-ca-certificates
-#RUN npm config set cafile "/etc/ssl/certs/npmjs.org.pem"
-#RUN git config --global http.sslVerify false
+RUN echo "" | openssl s_client -host registry.npmjs.org -port 443 -showcerts | awk '/BEGIN CERT/ {p=1} ; p==1; /END CERT/ {p=0}' > /usr/local/share/ca-certificates/npmjs.org.crt
+RUN update-ca-certificates
+RUN npm config set cafile "/etc/ssl/certs/npmjs.org.pem"
+RUN git config --global http.sslVerify false
 
 # Install samba
 RUN export DEBIAN_FRONTEND='noninteractive' && \
