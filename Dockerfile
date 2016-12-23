@@ -39,7 +39,7 @@ ENV NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib NODE_ENV=development
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
 RUN git clone https://github.com/sitepoint-editors/sitepoint_projectcode_chrome-extension-angular-typescript.git ng2ce
-WORKDIR /usr/src/ng2cd
+WORKDIR /usr/src/ng2ce
 RUN npm install
 RUN chmod -R 776 *
 
