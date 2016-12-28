@@ -17,7 +17,7 @@ or
 
 ## Running container
 
-    docker run -p 139:139 -p 445:445 -p 8000:8000 -p 3001:3001 -d --name ng2ce dman1680/angular2-chrome-extension
+    docker run -p 139:139 -p 445:445 -p 3000:3000 -p 3001:3001 -d --name ng2ce dman1680/angular2-chrome-extension
         
 ## Accessing container
 ### Find docker machine ip
@@ -26,7 +26,7 @@ or
 
 ### Browse demo webpage
     
-    http://<docker machine ip>:8000
+    http://<docker machine ip>:3000
 
 ### Setup network share access
 
