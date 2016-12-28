@@ -40,10 +40,11 @@ RUN mkdir -p /usr/src
 WORKDIR /usr/src
 RUN git clone https://github.com/sitepoint-editors/sitepoint_projectcode_chrome-extension-angular-typescript.git ng2ce
 WORKDIR /usr/src/ng2ce
-RUN npm install
 RUN chmod -R 776 *
+WORKDIR /usr/src/ng2ce/Project_Files
+RUN npm install
 
-EXPOSE 137/udp 138/udp 139 445 8000 3001
+EXPOSE 137/udp 138/udp 139 445 3000 3001
 
 # launch app 
 CMD ["npm","run start" ]
