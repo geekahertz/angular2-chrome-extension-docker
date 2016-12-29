@@ -47,6 +47,6 @@ RUN npm install
 EXPOSE 137/udp 138/udp 139 445 3000 3001
 
 # launch app 
-CMD ["npm","run start" ]
+CMD ["npm","start" ]
 
 
